@@ -1,1 +1,1 @@
-Starter code for Medium tutorial: Basic Data Structures in TypeScript
+Completed code for Medium tutorial: Basic Data Structures in TypeScript

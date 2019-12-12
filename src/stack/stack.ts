@@ -18,15 +18,28 @@ export class Stack<T> {
     }
 
     public push(newItem: T): void {
-        throw new Error('Implementation not provided');
+        if (this.isFull()) {
+            throw new Error('Stack overflow');
+        }
+
+        this.stack[this.length++] = newItem;
     }
 
     public pop(): T {
-        throw new Error('Implementation not provided');
+        if (this.isEmpty()) {
+            throw new Error('Stack underflow');
+        }
+
+        const retval = this.stack[--this.length];
+        return retval;
     }
 
     public top(): T {
-        throw new Error('Implementation not provided');
+        if (this.isEmpty()) {
+            throw new Error('Stack is empty');
+        }
+
+        return this.stack[this.length - 1];
     }
 
     public stackContents(): void {
