@@ -1,0 +1,23 @@
+{
+  "name": "ts-data-struct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "tsc --watch",
+    "start:dev": "nodemon dist/index.js",
+    "start": "concurrently \"npm:build:dev\" \"npm:start:dev\""
+  },
+  "keywords": [],
+  "author": "Richard Prasad",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "concurrently": "^5.0.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {}
+}
