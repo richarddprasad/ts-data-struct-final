@@ -89,7 +89,7 @@ export class LinkedList<T> {
 
         // Traverse the list in search of a matching item
         while (cur && cur.next !== this.tail) {
-            if (cur.next && cur.next.item == searchItem) {
+            if (cur.next && cur.next.item === searchItem) {
                 rv = true;
                 break;
             }
