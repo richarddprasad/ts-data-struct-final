@@ -52,6 +52,12 @@ describe('linked list', () => {
         // list.listContents();
     });
 
+    test('throws an error when using getFirst on an empty list', () => {
+        expect(() => {
+            list.getFirst();
+        }).toThrowError();
+    });
+
     test(`removeFirst removes element with value "C" after insertFirst "A", "B", "C"`, () => {
         list.insertFirst("A");
         list.insertFirst("B");
@@ -78,5 +84,21 @@ describe('linked list', () => {
         expect(list.removeFirst()).toBe("B");
         expect(list.removeFirst()).toBe("C");
         expect(list.isEmpty()).toBe(true);
+    });
+
+    test(`throw an error when calling remove("apple") on empty list`, () => {
+        expect(() => {
+            list.remove("apple");
+        }).toThrowError();
+    });
+
+    test(`return null when calling remove("apple") on non-empty list`, () => {
+        list.insertFirst("banana");
+        expect(list.remove("apple")).toBeNull();
+    });
+
+    test(`return "apple" when calling remove("apple") on non-empty list containing "apple"`, () => {
+        list.insertFirst("apple");
+        expect(list.remove("apple")).toBe("apple");
     });
 });
